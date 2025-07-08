@@ -1,0 +1,16 @@
+{
+  "name": "cashu-unlocker",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@cashu/cashu-ts": "^2.5.2",
+    "commander": "^14.0.0"
+  }
+}
