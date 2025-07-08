@@ -1,15 +1,23 @@
-# cashu-unlocker
+# nutcracker
 
-To install dependencies:
+A CLI tool to unlock P2PK Cashu tokens using your nsec
 
-```bash
-bun install
+## Commands
+
+**set-key**
+
+Saves an `ncrypt` on disk. This key will be used to unlock token later.
+If you enter an `nsec` you need to add a passphrase.
+
+**crack \<token\>**
+
+Unlocks `<token>` using the stored private key and prints a new, unlocked token to the console.
+
+## Installation
+
+Nutcracker is a Typescript project written for `bun`.
+You can run it directly in bun:
+
+```sh
+bun run src/index.ts
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.2.17. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

@@ -1,5 +1,5 @@
 {
-  "name": "cashu-unlocker",
+  "name": "nutcracker",
   "module": "index.ts",
   "type": "module",
   "private": true,
