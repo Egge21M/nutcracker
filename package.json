@@ -3,6 +3,14 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "start": "bun run srx/index.ts",
+    "build:linux": "bun build --compile --target=bun-linux-x64 --minify --sourcemap --bytecode ./src/index.ts --outfile dist/nutcracker-linux-x64",
+    "build:mac-intel": "bun build --compile --target=bun-darwin-x64 --minify --sourcemap --bytecode ./src/index.ts --outfile dist/nutcracker-mac-intel",
+    "build:mac-silicon": "bun build --compile --target=bun-darwin-arm64 --minify --sourcemap --bytecode ./src/index.ts --outfile dist/nutcracker-mac-silicon",
+    "build:windows": "bun build --compile --target=bun-windows-x64 --minify --sourcemap --bytecode ./src/index.ts --outfile dist/nutcracker-windows-x64",
+    "build:all": "bun run build:linux && bun run build:mac-intel && bun run build:mac-silicon && bun run build:mac-silicon && bun run build:windows"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/prompts": "^2.4.9"
